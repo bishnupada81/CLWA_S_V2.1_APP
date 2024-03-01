@@ -1,0 +1,13 @@
+<form [formGroup]="setPinForm" (ngSubmit)="setPinFormSubmit()" class="p-3 border" id="pinpage">
+  <div class="row g-0" >
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Enter Pin</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="setYourPin" class="form-label">Enter Your 6 Digit Pin</label>
+    <input type="password" class="form-control" id="setYourPin" formControlName="setPin">
+    <span style="color: red;" *ngIf="setPin && setPin.invalid && setPin.touched">This input is not valid</span>
+  </div>
+  <button type="submit" class="btn btn-primary text-center" [disabled]="setPinForm.invalid">Submit</button>
+</form>

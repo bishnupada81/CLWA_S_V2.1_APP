@@ -1,0 +1,30 @@
+<!-- <form [formGroup]="accountVerification" (ngSubmit)="accountVerificationFormSubmit()" class="p-3 border">
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Accounts associated with the Phone Number.</span>
+      </div>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary text-center" [disabled]="accountVerification.invalid" formControlName="account">917010013737890</button>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary text-center" [disabled]="accountVerification.invalid" formControlName="account">917010013737892</button>
+    </div>
+
+  </form> -->
+
+  <form [formGroup]="accountVerification" (ngSubmit)="accountVerificationFormSubmit()" class="p-3 border">
+    <div class="row g-0">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span class="fs-3">Accounts associated with the Phone Number.</span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Select an Account: </label>
+      <select #teams (change)="onSelected()" id="account" formControlName="account"  >
+        <option [defaultSelected]=true [value]="default" >{{default}}</option>
+        <option *ngFor="let c of accounts" [value]="c" >{{ c }}</option>
+      </select>
+    </div>
+    
+  </form>

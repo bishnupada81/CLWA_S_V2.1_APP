@@ -1,0 +1,25 @@
+<div id="modal">
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Please Scan the QR code </span>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <qrcode [qrdata]= "generateQRCode()" [width]="200" [errorCorrectionLevel] ="'M'"></qrcode>
+  </div>
+  <br />
+
+  <div class="text-center">
+    <button
+      class="text-center"
+      type="submit"
+      class="btn btn-primary text-center"
+      routerLink="amount"
+      (click)="redirection()"
+    >
+      Done
+    </button>
+     
+  </div>
+</div>

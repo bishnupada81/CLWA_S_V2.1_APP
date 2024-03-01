@@ -1,0 +1,13 @@
+<form [formGroup]="amountVerification" (ngSubmit)="amountFormSubmit()" class="p-3 border">
+  <div class="row g-0">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Enter Your Amount to Withdraw</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="enterYourAmount" class="form-label">Enter Your Amount</label>
+    <input type="text" class="form-control" id="enterYourAmount" formControlName="amount">
+    <span style="color: red;" *ngIf="amount && amount.invalid && amount.touched">This input is not valid</span>
+  </div>
+  <button type="submit" class="btn btn-primary text-center" [disabled]="amountVerification.invalid">Submit</button>
+</form>

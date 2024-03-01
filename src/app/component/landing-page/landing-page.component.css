@@ -1,0 +1,15 @@
+.first {
+  height: 200px;
+  text-align: center;
+  background-image: url("../../../assets/landing_page_image.jpg");
+  background-size: cover;
+  }
+
+.firstbtn{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.firstheading{
+  margin-top: 10px;
+}
